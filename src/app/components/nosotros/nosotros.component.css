@@ -1,0 +1,40 @@
+.nosotros .content {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  gap: 40px;
+  align-items: center;
+}
+
+.nosotros .content .textBox {
+  width: 40%;
+  min-width: 40%;
+}
+
+.nosotros .content .imgBx {
+  max-width: 400px;
+}
+
+.nosotros .content .imgBx img {
+  max-width: 280px;
+  min-height: 60vh;
+  border-radius: 5%;
+  aspect-ratio: 690 / 850;
+}
+
+@media (max-width: 991px) {
+  .nosotros .content {
+    flex-direction: column;
+  }
+
+  .nosotros .content .textBox {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .nosotros .content .imgBx {
+    margin-left: 0;
+    margin-top: 20px;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,67 @@
+<header #header>
+  <a routerLink="/" class="logo"><strong>Grúas</strong> Higuita</a>
+  <div #menuToggle class="toggle" (click)="toogleMenu()"></div>
+  <ul #menu class="menu">
+    <li>
+      <a
+        href="servicio-grua-cali-economicas-24-horas#inicio"
+        (click)="toogleMenu()"
+        >Inicio</a
+      >
+    </li>
+    <li>
+      <a
+        href="servicio-grua-cali-economicas-24-horas#nosotros"
+        (click)="toogleMenu()"
+        >Nosotros</a
+      >
+    </li>
+    <li>
+      <a
+        href="servicio-grua-cali-economicas-24-horas#trabajos"
+        (click)="toogleMenu()"
+        >Trabajos</a
+      >
+    </li>
+    <li>
+      <a
+        href="servicio-grua-cali-economicas-24-horas#servicios"
+        (click)="toogleMenu()"
+        >Servicios</a
+      >
+    </li>
+    <li>
+      <a
+        href="servicio-grua-cali-economicas-24-horas#testimonios"
+        (click)="toogleMenu()"
+        >Reseñas</a
+      >
+    </li>
+    <li>
+      <a
+        href="servicio-grua-cali-economicas-24-horas#contacto"
+        (click)="toogleMenu()"
+        >Contáctanos</a
+      >
+    </li>
+  </ul>
+</header>
+
+<!-- BTN WhatsApp BTN -->
+<div class="boxBtn" title="Asegura tu Vehículo">
+  <a
+    href="https://api.whatsapp.com/send/?phone=573104165391&text&type=phone_number&app_absent=0"
+    target="_blank"
+    class="btnWhatsApp"
+    title="WhatsApp - Grúas Higuita - Servicio Grúas"
+  >
+  </a>
+</div>
+<!-- BTN WhatsApp BTN -->
+
+<app-index id="inicio"></app-index>
+<app-nosotros id="nosotros"></app-nosotros>
+<app-trabajos id="trabajos"></app-trabajos>
+<app-servicios id="servicios"></app-servicios>
+<app-testimonios id="testimonios"></app-testimonios>
+<app-contactanos id="contacto"></app-contactanos>
