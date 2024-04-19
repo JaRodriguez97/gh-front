@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.nosotros .content .textBox {
+.nosotros .content article {
   width: 40%;
   min-width: 40%;
 }
@@ -27,7 +27,7 @@
     flex-direction: column;
   }
 
-  .nosotros .content .textBox {
+  .nosotros .content article {
     width: 100%;
     min-width: 100%;
   }
