@@ -5,7 +5,7 @@
   margin: 40px 0;
 }
 
-.services ul .serviceBox {
+.services ul li {
   border: var(--border);
   padding: 50px 20px;
   display: flex;
@@ -15,12 +15,12 @@
   flex-direction: column;
 }
 
-.services ul .serviceBox img {
+.services ul li img {
   max-height: 200px;
   max-width: 25vw;
 }
 
-.services ul .serviceBox h3 {
+.services ul li h3 {
   font-size: 1.1em;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -31,7 +31,7 @@
   text-transform: uppercase;
 }
 
-.services ul .serviceBox p {
+.services ul li p {
   text-align: center;
 }
 
@@ -42,10 +42,10 @@
 }
 
 @media (max-width: 680px) {
-  .services ul .serviceBox img {
+  .services ul li img {
     max-width: 50vw;
   }
-  
+
   .services ul {
     grid-template-columns: repeat(1, 1fr) !important;
   }
