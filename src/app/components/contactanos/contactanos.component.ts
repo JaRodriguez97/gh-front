@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 // import { ContactService } from '@services/Contact/contact.service';
@@ -14,7 +14,7 @@ import {
   templateUrl: './contactanos.component.html',
   styleUrls: ['./contactanos.component.css'],
 })
-export class ContactanosComponent implements OnInit {
+export class ContactanosComponent implements OnInit, AfterViewInit {
   contactForm!: FormGroup;
   faPhone = faPhone;
   faMapMarked = faMapMarked;
@@ -24,7 +24,8 @@ export class ContactanosComponent implements OnInit {
   constructor(
     // private contactService: ContactService,
     private router: Router,
-    private readonly formBuilder: FormBuilder
+    private readonly formBuilder: FormBuilder,
+    private elRef: ElementRef
   ) {}
 
   ngOnInit() {
@@ -35,12 +36,19 @@ export class ContactanosComponent implements OnInit {
     });
   }
 
+  ngAfterViewInit(): void {
+    // Obtener el elemento de fondo
+    const backgroundElement =
+      this.elRef.nativeElement.querySelector('.contact');
+
+    backgroundElement.classList.add('img');
+  }
+
   async sendContactMail(form: FormGroup): Promise<any> {
     if (this.textButton == 'Cargando...')
       return Swal.fire({
         icon: 'warning',
-        html: '<span>Por favor espere que se envie el anterior mensaje</span>',
-        scrollbarPadding: false,
+        html: '<strong>Por favor espere que se envie el anterior mensaje</strong>',
       });
 
     this.textButton = 'Cargando...';
@@ -52,8 +60,8 @@ export class ContactanosComponent implements OnInit {
     if (!nombreCompleto || !email || !mensaje)
       return Swal.fire({
         icon: 'warning',
-        html: '<span>Por favor diligencie los campos obligatorios para poder enviar el mensaje</span>',
-        scrollbarPadding: false,
+        title:
+          'Por favor diligencie los campos obligatorios para poder enviar el mensaje',
       }).then(() => (this.textButton = 'Enviar'));
 
     // this.contactService.sendMesage(value).subscribe({

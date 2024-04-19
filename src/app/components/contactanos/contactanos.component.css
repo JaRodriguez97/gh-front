@@ -3,10 +3,12 @@
   padding: 50px 100px;
   align-items: flex-start;
   flex-direction: column;
+  width: 100%;
+}
+
+.contact.img {
   background-image: url("../../../assets/images/bg.jpg");
   background-size: cover;
-  width: 100%;
-  /* color: var(--letrasSinContrasteColor); */
 }
 
 .contact .content {
@@ -83,6 +85,8 @@
   width: 40%;
   padding: 40px;
   background: var(--backgroundColorPrincipal);
+  border: 1px solid white;
+  border-radius: 10px;
 }
 
 .contactForm h3 {
