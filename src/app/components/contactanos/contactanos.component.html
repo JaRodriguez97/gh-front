@@ -14,7 +14,7 @@
           <fa-icon [icon]="faMapMarked"></fa-icon>
         </div>
         <article>
-          <h4>Dirección</h4>
+          <h3>Dirección</h3>
           <address>
             Calle 32 # 33-14
             <br />
@@ -27,7 +27,7 @@
       <li>
         <div class="icon"><fa-icon [icon]="faPhone"></fa-icon></div>
         <article>
-          <h4>Teléfonos</h4>
+          <h3>Teléfonos</h3>
           <address>+(57) 310 416 53 91</address>
           <address>+(57) 315 383 82 33</address>
         </article>
@@ -37,7 +37,7 @@
           <fa-icon [icon]="faEnvelope"></fa-icon>
         </div>
         <article>
-          <h4>Email</h4>
+          <h3>Email</h3>
           <address>Gruashiguita2023&#64;gmail.com</address>
         </article>
       </li>
@@ -52,23 +52,31 @@
         <div class="inputBox">
           <input
             name="nombreCompleto"
+            id="nombreCompleto"
             formControlName="nombreCompleto"
             type="text"
             required
           />
-          <span>Nombre Completo</span>
+          <label for="nombreCompleto">Nombre Completo</label>
         </div>
         <div class="inputBox">
-          <input name="email" formControlName="email" type="text" required />
-          <span>Email</span>
+          <input
+            name="email"
+            id="email"
+            formControlName="email"
+            type="text"
+            required
+          />
+          <label for="email">Email</label>
         </div>
         <div class="inputBox">
           <textarea
             name="mensaje"
+            id="mensaje"
             formControlName="mensaje"
             required
           ></textarea>
-          <span>Escribir mensaje</span>
+          <label for="mensaje">Escribir mensaje</label>
         </div>
         <div class="inputBox">
           <button type="submit" class="btn">{{ textButton }}</button>

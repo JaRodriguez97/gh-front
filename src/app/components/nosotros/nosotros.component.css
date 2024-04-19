@@ -17,9 +17,8 @@
 
 .nosotros .content .imgBx img {
   max-width: 280px;
-  min-height: 60vh;
   border-radius: 5%;
-  aspect-ratio: 690 / 850;
+  aspect-ratio: 280 / 359;
 }
 
 @media (max-width: 991px) {
