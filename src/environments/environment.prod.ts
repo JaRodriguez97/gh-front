@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  // urlBack: 'https://gruascl-back.up.railway.app/api/',
+  urlBack: 'http://gh.railway.internal/api/',
 };
