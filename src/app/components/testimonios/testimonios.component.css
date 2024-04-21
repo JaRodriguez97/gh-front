@@ -41,7 +41,7 @@
   text-wrap: balance;
 }
 
-.testimonials ul li h4 {
+.testimonials ul li h3 {
   text-align: right;
   margin-top: 20px;
   text-transform: uppercase;
@@ -54,7 +54,7 @@
   padding-right: 10px;
 }
 
-.testimonials ul li h4 span {
+.testimonials ul li h3 span {
   text-transform: initial;
   letter-spacing: 1px;
   font-weight: 300;

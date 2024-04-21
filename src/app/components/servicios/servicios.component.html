@@ -10,7 +10,7 @@
     <li *ngFor="let s of servicios">
       <img [src]="s.src" [alt]="s.alt" [title]="s.title" loading="lazy" />
       <h3>{{ s.titulo }}</h3>
-      <p>{{ s.parrafo }}</p>
+      <p [innerHTML]="s.parrafo"></p>
     </li>
   </ul>
 </section>
